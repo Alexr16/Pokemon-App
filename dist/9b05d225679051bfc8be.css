@@ -66,6 +66,10 @@ body {
   margin: 0 20px;
 }
 
+.menu-btn {
+  display: none;
+}
+
 #cards {
   display: -ms-grid;
   display: grid;
@@ -85,11 +89,14 @@ body {
           align-items: center;
   width: 200px;
   height: 200px;
-  border: 2px solid black;
+  border: none;
   margin-bottom: 1rem;
-  background: radial-gradient(circle, #555, #535353, #505050, #5a5858, #4c4c4c);
-  -webkit-box-shadow: 3px 3px #536e87;
-          box-shadow: 3px 3px #536e87;
+  background: radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
+}
+
+.image-container:hover {
+  -webkit-transform: perspective(3000px) rotateY(10deg);
+          transform: perspective(3000px) rotateY(10deg);
 }
 
 .poke-img {
@@ -165,12 +172,16 @@ body {
 .comment,
 .reservation {
   background: none;
-  border: 2px solid black;
-  -webkit-box-shadow: 3px 3px #536e87;
-          box-shadow: 3px 3px #536e87;
+  color: white;
   cursor: pointer;
   margin: 0.5rem 0;
   padding: 5px;
+  background: #919191;
+  border-radius: 4px;
+  -webkit-transition: -webkit-transform 1s ease 0s;
+  transition: -webkit-transform 1s ease 0s;
+  transition: transform 1s ease 0s;
+  transition: transform 1s ease 0s, -webkit-transform 1s ease 0s;
 }
 
 .comment:hover,
@@ -181,10 +192,11 @@ body {
 
 footer {
   max-width: 100%;
-  padding: 5px 5px 5px 15px;
+  padding: 20px 5px 20px 15px;
   border: 2px solid #000;
-  background-color: #fff;
+  color: #fff;
   margin-top: 2rem;
+  background-color: #0A285F;
 }
 
 .modalBackground {
@@ -193,7 +205,7 @@ footer {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #fff;
+  background: radial-gradient(circle, #fff, #5EBDFC, #5EBDFC, #1C4CBD, #1C4CBD);
   -ms-flex-line-pack: center;
       align-content: center;
 }
@@ -215,6 +227,16 @@ footer {
   overflow-x: hidden;
   overflow-y: auto;
   padding-bottom: 28px;
+  background: radial-gradient(circle, #fff, #5EBDFC, #5EBDFC, #5EBDFC, #fff);
+  -webkit-box-shadow: 3px 3px #536e87;
+          box-shadow: 3px 3px #536e87;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.024) 0px 0px 0px 1px, rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(0, 0, 0, 0.03) 0px 0px 8px 0px, rgba(0, 0, 0, 0.1) 0px 20px 30px 0px;
+          box-shadow: rgba(0, 0, 0, 0.024) 0px 0px 0px 1px, rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(0, 0, 0, 0.03) 0px 0px 8px 0px, rgba(0, 0, 0, 0.1) 0px 20px 30px 0px;
+}
+
+.modalContainer:hover {
+  -webkit-transform: perspective(3000px) rotateY(5deg);
+          transform: perspective(3000px) rotateY(5deg);
 }
 
 .scroll {
@@ -343,5 +365,137 @@ footer {
 .ulComment {
   text-decoration: none;
   list-style: none;
+}
+
+@media only screen and (max-width: 768px) {
+  #cards {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    margin: 1rem 1rem 0;
+  }
+  .image-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 150px;
+    height: 150px;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-name: slidein;
+            animation-name: slidein;
+  }
+  @-webkit-keyframes slidein {
+    from {
+      margin-left: 50%;
+      width: 100%;
+    }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  @keyframes slidein {
+    from {
+      margin-left: 50%;
+      width: 100%;
+    }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  .poke-img {
+    width: 80%;
+    height: 80%;
+  }
+  .title {
+    padding-right: 0.5rem;
+  }
+  .logo {
+    position: absolute;
+    top: 16px;
+    left: 77%;
+  }
+  .nav-bar {
+    margin: 0;
+    padding: 0;
+  }
+  .navigation {
+    position: fixed;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    left: -100%;
+    top: 0;
+    padding-top: 5rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-padding-start: 0;
+            padding-inline-start: 0;
+    margin-top: 0;
+    background: radial-gradient(ellipse at top, #fff, #5EBDFC, #5EBDFC, #1C4CBD, #1C4CBD);
+    opacity: 0.95;
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .navigation .link {
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    line-height: 1em;
+    margin: 2rem;
+  }
+  .nav-link {
+    margin-bottom: 2rem;
+  }
+  .show {
+    display: none;
+  }
+  .overflow-hidden {
+    overflow-y: hidden;
+  }
+  .navigation.active {
+    left: 0;
+  }
+  .menu-btn {
+    display: block;
+    cursor: pointer;
+    padding: 1.5rem;
+  }
+  .menu-icon {
+    border: none;
+    background: none;
+  }
+  .close-menu {
+    top: 2rem;
+    position: fixed;
+    left: 90%;
+  }
+  .add-new-link {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+  .modalContainer {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .pokeInfo {
+    grid-column-gap: 30px;
+  }
+  .popup-img {
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

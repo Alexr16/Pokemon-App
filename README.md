@@ -4,10 +4,9 @@
 
 > In this project I build a mobile and desktop version of a website, using what I learned in HTML and CSS.
 
-<!-- ## Screenshot
+## Screenshot
 
-<img src="./leaderboard.png">
-<img src="./lmobile.png">-->
+<img src="./View.jpg">
 
 ## Built With
 
