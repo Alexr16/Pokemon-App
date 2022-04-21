@@ -2,7 +2,7 @@
 
 # Pokemon-App
 
-> In this project I build a mobile and desktop version of a website, using what I learned in HTML and CSS.
+> In this project, I built a mobile and desktop version APP showing information about pokemon monsters fetched from PokeAPI.
 
 ## Screenshot
 
