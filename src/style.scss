@@ -1,0 +1,427 @@
+$shadow: #536e87;
+$btn-hover: #536e87;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+  width: 60px;
+  margin: 0 40px 0 1rem;
+}
+
+.logo-img {
+  width: 100%;
+}
+
+.nav-bar {
+  display: flex;
+  max-width: 90%;
+  margin: 10px auto;
+  padding: 5px 5px 50px 5px;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+
+  .link {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+  }
+
+  .link:hover,
+  .active {
+    color: #d5a100;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+}
+
+.contact-link {
+  margin-right: 10px;
+}
+
+.add-new-link {
+  padding: 0 20px;
+  margin: 0 20px;
+}
+
+.menu-btn {
+  display: none;
+}
+
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border: none;
+  margin-bottom: 1rem;
+  background: radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
+  &:hover {
+    transform: perspective(3000px) rotateY(10deg);
+  }
+}
+
+.poke-img {
+  width: 80%;
+  height: 80%;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 2.5rem;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  padding-right: 3rem;
+}
+
+.like {
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-image: url('./images/like.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+}
+
+.like:hover {
+  background-image: url('./images/heart.png');
+}
+
+.count {
+  display: contents;
+}
+
+.likes-count {
+  align-self: end;
+  padding: 0.5rem 0 0.2rem;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment,
+.reservation {
+  background: none;
+  color: white;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  padding: 5px;
+  background:  #919191;
+  border-radius: 4px;
+  transition: transform 1s ease 0s;
+}
+
+.comment:hover,
+.reservation:hover {
+  background: $btn-hover;
+  color: #fff;
+}
+
+footer {
+  max-width: 100%;
+  padding: 20px 5px 20px 15px;
+  border: 2px solid #000;
+  color: #fff;
+  margin-top: 2rem;
+  background-color: #0A285F;
+}
+
+.modalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle, #fff,  #5EBDFC, #5EBDFC, #1C4CBD, #1C4CBD);
+  align-content: center;
+}
+
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 95%;
+  width: 95%;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+  border: 3px solid #000;
+  align-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 28px;
+  background: radial-gradient(circle, #fff,  #5EBDFC, #5EBDFC, #5EBDFC, #fff);
+  &:hover {
+    transform: perspective(3000px) rotateY(5deg);
+  }
+  box-shadow: 3px 3px #536e87;
+  box-shadow:
+    rgba(0, 0, 0, 0.024) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.05) 0px 1px 0px 0px,
+    rgba(0, 0, 0, 0.03) 0px 0px 8px 0px,
+    rgba(0, 0, 0, 0.1) 0px 20px 30px 0px;
+}
+
+.scroll {
+  overflow-y: hidden;
+}
+
+.image-popup {
+  display: flex;
+  justify-content: center;
+}
+
+.popup-img {
+  padding-top: 20px;
+  width: 25%;
+  height: 25%;
+}
+
+.poke-title {
+  font-size: 3em;
+}
+
+.pokeInfo {
+  gap: 10px;
+  text-align: left;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto;
+  grid-row-gap: 10px;
+  grid-column-gap: 77px;
+  font-weight: bold;
+}
+
+.pop-title {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.form {
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 20px;
+  width: 300px;
+  justify-content: center;
+}
+
+.formName,
+.formInsight {
+  border: 2px solid;
+  padding: 2px;
+}
+
+.formButton {
+  background: none;
+  border: 2px solid black;
+  box-shadow: 3px 3px $shadow;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  padding: 5px;
+  width: 200px;
+}
+
+.formContain {
+  display: flex;
+  justify-content: center;
+}
+
+.commentContain {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.commentTitle {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.commentInfo {
+  display: flex;
+  justify-content: center;
+}
+
+.closeBtn {
+  display: block;
+  position: absolute;
+  right: 10px;
+  transition: 0.3s;
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-image: url('./images/close.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.ulComment {
+  text-decoration: none;
+  list-style: none;
+}
+
+@media only screen and (max-width: 768px) {
+  #cards {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem 1rem 0;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    animation-duration: 2s;
+    animation-name: slidein;
+  }
+
+  @keyframes slidein {
+    from {
+      margin-left: 50%;
+      width: 100%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  
+  .poke-img {
+    width: 80%;
+    height: 80%;
+  }
+
+  .title {
+    padding-right: 0.5rem;
+  }
+
+  .logo {
+    position: absolute;
+    top: 16px;
+    left: 77%;
+  }
+
+  .nav-bar {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navigation {
+    position: fixed;
+    flex-direction: column;
+    left: -100%;
+    top: 0;
+    padding-top: 5rem;
+    align-items: flex-start;
+    padding-inline-start: 0;
+    margin-top: 0;
+    background: radial-gradient(ellipse at top, #fff,  #5EBDFC, #5EBDFC, #1C4CBD, #1C4CBD);
+    opacity: 0.95;
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    .link {
+      font-family: Lato, sans-serif;
+      font-weight: 700;
+      font-size: 2.5em;
+      line-height: 1em;
+      margin: 2rem;
+    }
+  }
+
+  .nav-link {
+    margin-bottom: 2rem;
+  }
+
+  .show {
+    display: none;
+  }
+
+  .overflow-hidden {
+    overflow-y: hidden;
+  }
+  
+  .navigation.active {
+    left: 0;
+  }
+
+  .menu-btn {
+    display: block;
+    cursor: pointer;
+    padding: 1.5rem;
+  }
+
+  .menu-icon {
+    border: none;
+    background: none;
+  }
+
+  .close-menu {
+    top: 2rem;
+    position: fixed;
+    left: 90%;
+  }
+  
+  .add-new-link {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+
+  .modalContainer {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .pokeInfo {
+    grid-column-gap: 30px;
+  }
+
+  .popup-img {
+    width: 50%;
+}
+}  

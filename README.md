@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# project-name
+# Pokemon-App
 
 > In this project I build a mobile and desktop version of a website, using what I learned in HTML and CSS.
 
@@ -18,7 +18,7 @@
 
 ## Live Demo
 
-For a live demo of the Portfolio [click here](https://Alexr16.github.io/project-name/).
+For a live demo of the Portfolio [click here](https://Alexr16.github.io/Pokemon-App/).
 
 ## Getting Started
 
@@ -26,10 +26,10 @@ To get a local copy of the project, follow these steps:
 1. Open the terminal and navigate to the folder where you would like to put these files.
 2. Type the following commands into the terminal: 
  ```
- git clone https://github.com/Alexr16/project-name
+ git clone https://github.com/Alexr16/Pokemon-App
  ```
  ```
- cd project-name
+ cd Pokemon-App
  ```
  
 ## Run project
@@ -57,7 +57,7 @@ $ open dist/index.html
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Alexr16/project-name/issues).
+Feel free to check the [issues page](https://github.com/Alexr16/Pokemon-App/issues).
 
 ## Show your support
 

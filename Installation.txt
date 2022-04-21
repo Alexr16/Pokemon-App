@@ -1,5 +1,5 @@
 Setup
-Replace "project-name" for your project's name, you can do that by pressing the search button on the left navbar.
+Replace "Pokemon-App" for your project's name, you can do that by pressing the search button on the left navbar.
 
 Webpack
 npm init -y

@@ -1,0 +1,347 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+  width: 60px;
+  margin: 0 40px 0 1rem;
+}
+
+.logo-img {
+  width: 100%;
+}
+
+.nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 90%;
+  margin: 10px auto;
+  padding: 5px 5px 50px 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.navigation .link {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.navigation .link:hover,
+.navigation .active {
+  color: #d5a100;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.contact-link {
+  margin-right: 10px;
+}
+
+.add-new-link {
+  padding: 0 20px;
+  margin: 0 20px;
+}
+
+#cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  margin-bottom: 1rem;
+  background: radial-gradient(circle, #555, #535353, #505050, #5a5858, #4c4c4c);
+  -webkit-box-shadow: 3px 3px #536e87;
+          box-shadow: 3px 3px #536e87;
+}
+
+.poke-img {
+  width: 80%;
+  height: 80%;
+}
+
+.card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  margin-bottom: 2.5rem;
+}
+
+.card-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title {
+  padding-right: 3rem;
+}
+
+.like {
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-image: url("./images/like.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+}
+
+.like:hover {
+  background-image: url("./images/heart.png");
+}
+
+.count {
+  display: contents;
+}
+
+.likes-count {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  padding: 0.5rem 0 0.2rem;
+}
+
+.btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.comment,
+.reservation {
+  background: none;
+  border: 2px solid black;
+  -webkit-box-shadow: 3px 3px #536e87;
+          box-shadow: 3px 3px #536e87;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  padding: 5px;
+}
+
+.comment:hover,
+.reservation:hover {
+  background: #536e87;
+  color: #fff;
+}
+
+footer {
+  max-width: 100%;
+  padding: 5px 5px 5px 15px;
+  border: 2px solid #000;
+  background-color: #fff;
+  margin-top: 2rem;
+}
+
+.modalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 95%;
+  width: 95%;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+  border: 3px solid #000;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 28px;
+}
+
+.scroll {
+  overflow-y: hidden;
+}
+
+.image-popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup-img {
+  padding-top: 20px;
+  width: 25%;
+  height: 25%;
+}
+
+.poke-title {
+  font-size: 3em;
+}
+
+.pokeInfo {
+  gap: 10px;
+  text-align: left;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  grid-row-gap: 10px;
+  grid-column-gap: 77px;
+  font-weight: bold;
+}
+
+.pop-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 30px;
+}
+
+.form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-row-gap: 20px;
+  width: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.formName,
+.formInsight {
+  border: 2px solid;
+  padding: 2px;
+}
+
+.formButton {
+  background: none;
+  border: 2px solid black;
+  -webkit-box-shadow: 3px 3px #536e87;
+          box-shadow: 3px 3px #536e87;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  padding: 5px;
+  width: 200px;
+}
+
+.formContain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.commentContain {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.commentTitle {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.commentInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.closeBtn {
+  display: block;
+  position: absolute;
+  right: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-image: url("./images/close.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.ulComment {
+  text-decoration: none;
+  list-style: none;
+}
+/*# sourceMappingURL=style.css.map */
