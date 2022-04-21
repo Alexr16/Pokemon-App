@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-For a live demo of the Portfolio [click here](https://Alexr16.github.io/Pokemon-App/).
+For a live demo of the APP [click here](https://Alexr16.github.io/Pokemon-App/).
 
 ## Getting Started
 
